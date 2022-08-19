@@ -1,0 +1,63 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.infosys</groupId>
+  <artifactId>demomaven1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>demomaven1</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>5.0.3</version>
+		</dependency>
+
+
+  </dependencies>
+</project>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q Can we change the version of the dependency?
+A Yes
+https://mvnrepository.com/ ====> go to the site and search for the required version and we can findout the dependency jar file related info like version,artifact id
+https://repo.maven.apache.org/maven2/=======> is the library from where we get the jar files which are required for our project and which we mention in the dependency tag.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q Can we have single compressed file ( jar) for our created projects?
+A Yes. It is possible with  maven's install command. 
+
+Q After creation of this jar file where it will get stored?
+A It will be stored in the target folder of the project.
+For this we have right click on the project.
+Run as
+Maven build ...
+We will get a dialog box where we mention the goal as install.
+Click on Run.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Try the goal with clean build phase. You will observe the target folder along with its content is getting deleted.
+
+
+maven-clean-plugin:2.5===================> cleaning the target folder which will have the final product , the jar file of the application.
+maven-resources-plugin:2.6===============> it is taking care of the resources folder. if no resource folder is available the plugin will show the message.
+maven-compiler-plugin:3.1================> compile all the java file and create the .class files and store it in the target folder.
+maven-surefire-plugin:2.12.4=============> Generating the test report.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Do we need to include all this plugins in our pom.xml?
+A No. They are mentioned in parent-pom.xml.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
