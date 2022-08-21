@@ -123,11 +123,11 @@ sindhuja.kanuganti@infosys.com
 
 GROUP-P
 
-mantrika.ravi@infosys.com
-simran.patel01@infosys.com
-santhosh.k36@infosys.com
-bhairi.geethanjali@infosys.com
-manisha30@infosys.com
+mantrika.ravi@infosys.com  -
+simran.patel01@infosys.com - CartAPI
+santhosh.k36@infosys.com   - CustomerAPI
+bhairi.geethanjali@infosys.com - ProductAPI
+manisha30@infosys.com -  
 
 
 GROUP-Q
